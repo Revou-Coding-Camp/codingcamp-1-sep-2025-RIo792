@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Todo List</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1>Todo List</h1>
-    <form id="todoForm">
-      <input id="taskInput" type="text" placeholder="Add a task..." required>
-      <button type="submit">Add</button>
-    </form>
-    <ul id="todoList"></ul>
-  </div>
-  <!-- use script.js -->
-  <script src="script.js"></script>
-</body>
+  <div class="todo-container">
+    <h2>Todo List</h2>
 
+    <!-- Form Add -->
+    <div class="form-group">
+      <input type="text" id="task" placeholder="Add a todo...">
+      <input type="date" id="date">
+      <button id="add-btn">+</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button id="filter-btn">FILTER</button>
+      <button id="delete-all">DELETE ALL</button>
+    </div>
+
+    <!-- Task Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="todo-body">
+        <tr><td colspan="4" style="text-align:center;">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
